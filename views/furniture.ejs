@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/CSS/category.css">
+</head>
+<body>
+ 
+  <div class="navbar">
+    <div class="left-nav">
+      <div class="logo">ClickCart</div>
+      <div class="search-container">
+        <form class="search-form" id="searchForm">
+          <input class="search-input" type="text" name="category" id="category" placeholder="Search category...">
+          <button class="search-button" type="submit">
+            <img src="/Images/search.png" alt="Search">
+          </button>
+        </form>
+      </div>
+  </div>
+    <div>
+      <a href="http://localhost:3000/">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Category</button>
+          <div class="dropdown-content">
+            <a href="http://localhost:3000/shirts">Tshirts</a>
+            <a href="http://localhost:3000/jeans">Jeans</a>
+            <a href="http://localhost:3000/footwear">Footwear</a>
+            <a href="http://localhost:3000/appliances">Electrical Appliances</a>
+            <a href="http://localhost:3000/mobiles">Mobile</a>
+            <a href="http://localhost:3000/book">Book</a>
+            <a href="http://localhost:3000/cosmetics">Cosmetic</a>
+            <a href="http://localhost:3000/sports">Sports Item</a>
+            <a href="http://localhost:3000/furniture">Furniture</a>
+            <a href="http://localhost:3000/kitchen">Kitchen</a>
+          </div>
+        </div>
+      </a>
+      <a href="http://">About Us</a>
+      <a href="http://">Contact Us</a>
+      <a class="shopping" href="http://localhost:3000/cart"><img src="/Images/shopping-cart.png" alt="shopping-cart"></a>
+    </div>
+  </div>
+
+
+  <div class="card-container">
+  <% furnitures.forEach(furniture => { %>
+    <form action="/cart/add" method="post">
+      <div class="card">
+        <img src="<%= furniture.image %>" alt="<%= furniture.title %>">
+        <div class="card-text">
+          <h2><%= furniture.title %></h2>
+          <p class="description"><%= furniture.description %></p>
+          <div class="price-btn">
+            <p class="price">₹ <%= furniture.price %></p>
+            <input type="hidden" name="productId" value="<%= furniture._id %>">
+            <input type="hidden" name="productTitle" value="<%= furniture.title%>">
+            <input type="hidden" name="productDescription" value="<%= furniture.description%>">
+            <input type="hidden" name="productPrice" value="<%= furniture.price%>">
+            <input type="hidden" name="productImage" value="<%= furniture.image%>">
+            <input type="hidden" name="productCategory" value="<%= furniture.category%>">
+             <div>
+          </div>
+        </div>
+           <div class="qty-control">
+      <button type="button" onclick="changeQty(this, -1)">‑</button>
+      <input type="number" name="productQuantity" value="1" min="1" class="qty-input">
+      <button type="button" onclick="changeQty(this, +1)">+</button>
+    </div>
+    </div>
+              <div><button type="submit" class="cart-button">Add to Cart</button></div>
+      </div>
+
+    </form>
+  <% }) %>
+
+  
+  <script src="/JS/cart.js"></script>
+  
+</body>
+</html>

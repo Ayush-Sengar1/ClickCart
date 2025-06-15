@@ -1,0 +1,304 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Container for the form */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+  .logo {
+    margin: auto;
+    align-items: baseline;
+  }
+  
+  .shopping img{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: relative;
+    top: .4rem
+  }
+
+  .shopping span {
+    padding: .3rem;
+    position: relative;
+    top: -1rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.495);
+    left: -.6rem;
+    border-radius: 50%;
+  }
+
+  /* Styling the form */
+  .search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input field for category */
+  .search-input {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 250px;
+    outline: none;
+  }
+
+  
+  
+  .left-nav {
+    display: flex;
+  }
+
+  /* Button styling */
+  .search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .search-button:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  /* Styling the search icon inside the button */
+  .search-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
+    padding: 15px 30px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    border-radius: .5rem;
+  }
+  
+  /* Navbar brand */
+  .navbar > div:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+  }
+  
+  /* Navbar links container */
+  .navbar > div > a {
+    color: #333;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    margin: 0 15px;
+    border-radius: 25px; /* Rounded borders for a softer look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+  }
+  
+  /* Navbar links hover effect */
+  .navbar > div > a:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+    color: #007BFF; /* Change text color to blue */
+    transform: translateY(-2px);
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown button */
+  .dropbtn {
+    background-color: rgba(255, 255, 255, 0.9); /* Light translucent background */
+    color: #333;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none; /* Light border for the button */
+    border-radius: 25px; /* Rounded borders */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dropdown button hover effect */
+  .dropbtn:hover {
+    background-color: #f1f1f1; /* Light background */
+    color: #007BFF; /* Text color changes to blue */
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* White background for dropdown */
+    min-width: 200px; /* Increased width for more space */
+    z-index: 1;
+    border-radius: 10px; /* Slight rounding of the dropdown container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border: 1px solid #ddd; /* Light border */
+    padding: 10px 0; /* Extra padding for clearer separation of items */
+  }
+  
+  /* Dropdown links */
+  .dropdown-content a {
+    color: #333;
+    padding: 15px 20px; /* More space between items */
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 5px; /* Slight rounding of dropdown items */
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  /* Hover effect for dropdown items */
+  .dropdown-content a:hover {
+    background-color: #007BFF;
+    color: white;
+    padding-left: 30px; /* Add left padding on hover for a subtle slide effect */
+  }
+  
+  /* Show dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Navbar responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar > div > a {
+      padding: 12px;
+      width: 100%;
+      text-align: left;
+    }
+  
+    .dropbtn {
+      width: 100%;
+    }
+  
+    .dropdown-content {
+      width: 100%;
+    }
+  }
+
+  .content {
+    background: url(../Images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:auto;
+    height: 80vh;
+    border-radius: 1rem;
+  }
+  
+  .inner-content {
+    padding: 2rem;
+    width: 50%;
+  }
+
+  .inner-content h5 {
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 400;
+    padding-top:10rem ;
+  }
+
+  .inner-content h6 {
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+  }
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    /* padding: 20px; */
+    margin: 50px 10px 50px 10px;
+  }
+
+  .category a {
+    flex: 0 1 calc(20% - 16px);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .category a:hover {
+    transform: scale(1.05);
+  }
+
+  .category-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+  }
+
+  .category-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .category-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .category a {
+      flex: 0 1 calc(33.33% - 16px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category a {
+      flex: 0 1 calc(50% - 16px);
+    }
+  }

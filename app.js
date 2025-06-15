@@ -14,8 +14,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const { title } = require("process");
+MONGO_URL="mongodb://localhost:27017/products"
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(MONGO_URL)
   .then(() => { console.log("MONGODB CONNECTED"); })
   .catch((err) => { console.log(err); });
 

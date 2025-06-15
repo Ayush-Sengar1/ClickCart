@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -14,7 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const { title } = require("process");
-MONGO_URL="mongodb://localhost:27017/products"
+MONGO_URL = "mongodb://localhost:27017/products"
 
 mongoose.connect(MONGO_URL)
   .then(() => { console.log("MONGODB CONNECTED"); })
